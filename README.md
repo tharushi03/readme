@@ -11,6 +11,7 @@ I'm a versatile developer with hands-on experience in multiple programming langu
 **Currently exploring:** Full-stack development | Web technologies | Scalable architectures
 
 ---
+https://img.shields.io/badge/Repositories-12-brightblue?style=flat-square
 
 ## 🛠️ Tech Stack
 
