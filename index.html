@@ -258,9 +258,33 @@
 
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 350px 1fr;
             gap: 3rem;
-            align-items: center;
+            align-items: flex-start;
+        }
+
+        .about-image {
+            position: sticky;
+            top: 100px;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 15px;
+            border: 2px solid rgba(37, 99, 235, 0.3);
+            box-shadow: 0 10px 40px rgba(37, 99, 235, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .about-image img:hover {
+            border-color: var(--accent-color);
+            box-shadow: 0 15px 50px rgba(37, 99, 235, 0.25);
+        }
+
+        .about-right {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
         }
 
         .about-text {
@@ -301,6 +325,15 @@
         .skill-item p {
             color: var(--text-muted);
             font-size: 0.95rem;
+        }
+
+        @media (max-width: 1024px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            .about-image {
+                position: static;
+            }
         }
 
         @media (max-width: 768px) {
@@ -679,54 +712,60 @@
         <div class="container-lg">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
-                <div class="about-text">
-                    <p>I'm an Information Systems undergraduate at the <strong>University of Colombo School of Computing</strong> (2024-2027) with a passion for building functional and engaging web applications.</p>
-                    <p>With hands-on experience in full-stack development, I specialize in creating solutions that combine technical excellence with user-centric design. I'm driven by curiosity and continuously explore new technologies to improve my craft.</p>
-                    <p>As an <strong>AIESEC volunteer</strong>, I've developed strong collaboration and communication skills while facilitating cross-cultural integration. I believe in writing clean code, solving real-world problems, and making meaningful contributions to projects.</p>
-                    <p><strong>Currently seeking:</strong> Web Development or Business Analyst internship positions to apply my skills and grow in a professional environment.</p>
+                <div class="about-image">
+                    <img src="portrait.jpeg" alt="Tharushi Dilara">
                 </div>
-                <div>
-                    <h3 style="margin-bottom: 1.5rem;">Technical Skills</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <h4>Backend Development</h4>
-                            <p>Java, PHP, Node.js</p>
-                        </div>
-                        <div class="skill-item">
-                            <h4>Frontend Development</h4>
-                            <p>JavaScript, HTML5, CSS3</p>
-                        </div>
-                        <div class="skill-item">
-                            <h4>Database Management</h4>
-                            <p>SQL, Database Design</p>
-                        </div>
-                        <div class="skill-item">
-                            <h4>Tools & Platforms</h4>
-                            <p>Git, GitHub, Bootstrap</p>
-                        </div>
-                        <div class="skill-item">
-                            <h4>Soft Skills</h4>
-                            <p>Problem-Solving, Team Collaboration</p>
-                        </div>
-                        <div class="skill-item">
-                            <h4>Specializations</h4>
-                            <p>API Development, Networking</p>
+                <div class="about-right">
+                    <div class="about-text">
+                        <p>I'm an Information Systems undergraduate at the <strong>University of Colombo School of Computing</strong> (2024-2027) with a passion for building functional and engaging web applications.</p>
+                        <p>With hands-on experience in full-stack development, I specialize in creating solutions that combine technical excellence with user-centric design. I'm driven by curiosity and continuously explore new technologies to improve my craft.</p>
+                        <p>As an <strong>AIESEC volunteer</strong>, I've developed strong collaboration and communication skills while facilitating cross-cultural integration. I believe in writing clean code, solving real-world problems, and making meaningful contributions to projects.</p>
+                        <p><strong>Currently seeking:</strong> Web Development or Business Analyst internship positions to apply my skills and grow in a professional environment.</p>
+                    </div>
+
+                    <div>
+                        <h3 style="margin-bottom: 1.5rem;">Technical Skills</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <h4>Backend Development</h4>
+                                <p>Java, PHP, Node.js</p>
+                            </div>
+                            <div class="skill-item">
+                                <h4>Frontend Development</h4>
+                                <p>JavaScript, HTML5, CSS3</p>
+                            </div>
+                            <div class="skill-item">
+                                <h4>Database Management</h4>
+                                <p>SQL, Database Design</p>
+                            </div>
+                            <div class="skill-item">
+                                <h4>Tools & Platforms</h4>
+                                <p>Git, GitHub, Bootstrap</p>
+                            </div>
+                            <div class="skill-item">
+                                <h4>Soft Skills</h4>
+                                <p>Problem-Solving, Team Collaboration</p>
+                            </div>
+                            <div class="skill-item">
+                                <h4>Specializations</h4>
+                                <p>API Development, Networking</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div style="margin-top: 3rem;">
-                <h3 style="text-align: center; margin-bottom: 2rem;">Technology Stack</h3>
-                <div class="tech-stack">
-                    <div class="tech-item"><i class="fab fa-java"></i> Java</div>
-                    <div class="tech-item"><i class="fab fa-php"></i> PHP</div>
-                    <div class="tech-item"><i class="fab fa-js-square"></i> JavaScript</div>
-                    <div class="tech-item"><i class="fab fa-html5"></i> HTML5</div>
-                    <div class="tech-item"><i class="fab fa-css3-alt"></i> CSS3</div>
-                    <div class="tech-item"><i class="fab fa-git-alt"></i> Git</div>
-                    <div class="tech-item"><i class="fab fa-github"></i> GitHub</div>
-                    <div class="tech-item"><i class="fas fa-database"></i> SQL</div>
+                    <div style="margin-top: 1rem;">
+                        <h3 style="margin-bottom: 1.5rem;">Technology Stack</h3>
+                        <div class="tech-stack">
+                            <div class="tech-item"><i class="fab fa-java"></i> Java</div>
+                            <div class="tech-item"><i class="fab fa-php"></i> PHP</div>
+                            <div class="tech-item"><i class="fab fa-js-square"></i> JavaScript</div>
+                            <div class="tech-item"><i class="fab fa-html5"></i> HTML5</div>
+                            <div class="tech-item"><i class="fab fa-css3-alt"></i> CSS3</div>
+                            <div class="tech-item"><i class="fab fa-git-alt"></i> Git</div>
+                            <div class="tech-item"><i class="fab fa-github"></i> GitHub</div>
+                            <div class="tech-item"><i class="fas fa-database"></i> SQL</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
